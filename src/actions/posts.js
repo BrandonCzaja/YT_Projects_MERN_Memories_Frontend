@@ -3,7 +3,14 @@ import * as api from "../api"; // import everything from the actions as api. We 
 // Create actions creators: Functions that return an action
 // An action is an object that has a type and a payload
 // Getting the payload (data) takes time so we have to use async(dispatch) from redux-thunk to get all the posts
-const getPosts = () => async (dispatch) => {
-	const action = { type: "FETCH_ALL", payload: [] };
-	dispatch(action); // With redux-thunk you don't return the action, you have to use dispatch instead
+export const getPosts = () => async (dispatch) => {
+	try {
+		// This is the response from the api, which has the data object. Data represents our posts
+		// response => data => data
+		const { data } = await api.fetchPosts();
+		// dispatch(action); // With redux-thunk you don't return the action, you have to use dispatch instead
+		dispatch({ type: "FETCH_ALL", payload: data }); // we are dispatching the action
+	} catch (error) {
+		console.log(error.message);
+	}
 };
