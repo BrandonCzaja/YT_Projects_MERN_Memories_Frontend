@@ -14,3 +14,5 @@ const Posts = () => {
 };
 
 export default Posts;
+
+// For styling: Ex: <h1 className={classes.xyz}>Posts</h1>

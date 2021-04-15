@@ -7,3 +7,5 @@ const Form = () => {
 };
 
 export default Form;
+
+// For styling: Ex: <h1 className={classes.xyz}>Form</h1>

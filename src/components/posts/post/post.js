@@ -7,3 +7,5 @@ const Post = () => {
 };
 
 export default Post;
+
+// For styling: Ex: <h1 className={classes.xyz}>Post</h1>
