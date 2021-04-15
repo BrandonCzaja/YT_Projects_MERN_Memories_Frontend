@@ -11,7 +11,6 @@ export default (posts = [], action) => {
 			// As soon as the action gets dispatched it comes here. Since we are immediately fetching the posts from the action we can just return the action payload, which is the actual posts
 			return action.payload;
 		case "CREATE":
-			// We will return logic, but for now we will just return state
 			return [...posts, action.payload];
 		default:
 			return posts;
