@@ -4,4 +4,4 @@ import { combineReducers } from "redux";
 import posts from "./posts";
 
 // Since the key and value are the same, I need write a single 'posts', not posts: posts
-export default combineReducers({ posts });
+export const reducers = combineReducers({ posts });

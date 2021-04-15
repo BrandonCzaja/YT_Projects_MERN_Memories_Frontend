@@ -1,7 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux"; // Fetch the data from the global redux store
+
 import Post from "./post/post";
 import useStyles from "./styles";
-import { useSelector } from "react-redux"; // Fetch the data from the global redux store
 
 const Posts = () => {
 	const posts = useSelector((state) => state.posts); // It is called posts from the reducers => index.js file
