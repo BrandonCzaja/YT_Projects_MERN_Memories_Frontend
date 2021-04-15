@@ -10,4 +10,10 @@ import App from "./App";
 
 const store = createStore(reducers, compose(applyMiddleware(thunk)));
 
-ReactDom.render(<App />, document.getElementById("root"));
+// Once the store is complete (after creating the reducers) I can wrap the App component in the Provider and use store
+ReactDom.render(
+	<Provider store={store}>
+		<App />
+	</Provider>,
+	document.getElementById("root")
+);
