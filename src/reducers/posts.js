@@ -16,3 +16,5 @@ export default (posts = [], action) => {
 			return posts;
 	}
 };
+
+// I have finished the first video but still have the same errors. I should fix those before continuing
